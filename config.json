@@ -1,0 +1,35 @@
+{
+  "name": "Earthquake Alert",
+  "version": "0.40",
+  "slug": "eq_alert",
+  "description": "Earthquake alerts from INFP",
+  "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+  "startup": "application",
+  "boot": "auto",
+  "init": false,
+  "homeassistant_api": true,
+  "services": [
+    "mqtt:need"
+  ],
+  "options": {
+    "telegram_api_id": "",
+    "telegram_api_hash": "",
+    "telegram_session_hash": "",
+    "mqtt_server": "core-mosquitto",
+    "mqtt_port": 1883,
+    "mqtt_topic": "infp/eq_alert",
+    "chat_names": ["EarthBot", "Alerta Cutremur M 5.0 - 6.0", "Alerta Cutremur M 6.0 - 7.0", "Alerta Cutremur M7-8"]
+  },
+  "schema": {
+    "telegram_api_id": "str",
+    "telegram_api_hash": "str",
+    "telegram_session_hash": "str",
+    "mqtt_server": "str",
+    "mqtt_port": "int",
+    "mqtt_topic": "str?",
+    "mqtt_username": "str?",
+    "mqtt_password": "str?",
+    "chat_names": ["str?"]
+  },
+  "ports": {}
+}
